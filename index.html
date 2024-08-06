@@ -4,9 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cherry Wu - Personal Website</title>
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <style>
+    :root {
+      font-family: Inter, sans-serif;
+      font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+    }
+    @supports (font-variation-settings: normal) {
+      :root { font-family: InterVariable, sans-serif; }
+    }
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       display: flex;
@@ -64,7 +72,7 @@
     </div>
     
     <div class="contact">
-      <p>Email: <a href="mailto:sw1306@georgetown.edu">your.email@example.com</a></p>
+      <p>Email: <a href="mailto:sw1306@georgetown.edu">Chat with me</a></p>
     </div>
     
     <div class="social-links">
@@ -80,7 +88,7 @@
     
     <div class="resume">
       <h2>Resume</h2>
-      <p><a href="resume.pdf" target="_blank">Download my resume</a></p>
+      <p><a href="tinyurl.com/cvcherrywu0824" target="_blank">View my resume</a></p>
     </div>
   </div>
 </div>
