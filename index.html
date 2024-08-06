@@ -17,21 +17,18 @@
     body {
       margin: 0;
       padding: 0;
+      background-color: #EDC7B7;
+      color: #333;
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      background-color: #f4f4f4;
-      min-height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
     }
     .container {
       display: flex;
       flex-direction: column;
-      max-width: 1000px;
       width: 100%;
-      margin: 20px;
-      background: white;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 1000px;
     }
     .column {
       padding: 20px;
@@ -55,7 +52,11 @@
         flex-direction: row;
       }
       .left-column {
-        border-right: 1px solid #ddd;
+        flex: 2;
+        padding-right: 40px;
+      }
+      .right-column {
+        flex: 3;
       }
       .social-links a {
         text-align: left;
@@ -76,7 +77,7 @@
     </div>
     
     <div class="social-links">
-      <a href="https://www.linkedin.com/in/cherry-wu/" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/cherry-wu/" target="_blank">Connect with me</a>
     </div>
   </div>
   
@@ -88,7 +89,7 @@
     
     <div class="resume">
       <h2>Resume</h2>
-      <p><a href="tinyurl.com/cvcherrywu0824" target="_blank">View my resume</a></p>
+      <p><a href="https://drive.google.com/file/d/1PZQYosbe2lb3XwKisBWOkAWsgJopJcEF/view" target="_blank">View my resume</a></p>
     </div>
   </div>
 </div>
