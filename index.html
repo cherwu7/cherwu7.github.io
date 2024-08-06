@@ -33,16 +33,21 @@
     .column {
       padding: 20px;
     }
+    .header {
+      text-align: right;
+    }
     .header h1 {
       margin: 0;
-      text-align: center;
+      font-size: 2.5em;
+    }
+    .social-links {
+      text-align: right;
     }
     .social-links a {
       display: block;
       margin: 10px 0;
-      text-decoration: none;
+      text-decoration: underline;
       color: #333;
-      text-align: center;
     }
     .bio, .resume {
       margin-top: 20px;
@@ -54,12 +59,13 @@
       .left-column {
         flex: 2;
         padding-right: 40px;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
       }
       .right-column {
         flex: 3;
-      }
-      .social-links a {
-        text-align: left;
       }
     }
   </style>
@@ -72,11 +78,8 @@
       <h1>Cherry Wu</h1>
     </div>
     
-    <div class="contact">
-      <p>Email: <a href="mailto:sw1306@georgetown.edu">Chat with me</a></p>
-    </div>
-    
     <div class="social-links">
+      <a href="mailto:sw1306@georgetown.edu">Chat with me</a>
       <a href="https://www.linkedin.com/in/cherry-wu/" target="_blank">Connect with me</a>
     </div>
   </div>
