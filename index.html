@@ -49,10 +49,10 @@
       text-decoration: underline;
       color: #333;
     }
-    .about, .read, .resume {
+    .about, .read, .resume, .informal-bio {
       margin-top: 20px;
     }
-    .resume a, .read a {
+    .about a, .read a, .resume a {
       color: #333;
       text-decoration: underline;
     }
@@ -68,6 +68,11 @@
       }
       .right-column {
         flex: 3;
+      }
+    }
+    @media(max-width: 599px) {
+      .header, .social-links {
+        text-align: left;
       }
     }
   </style>
@@ -104,6 +109,11 @@
     <div class="resume">
       <h2>Resume</h2>
       <p><a href="https://drive.google.com/file/d/1PZQYosbe2lb3XwKisBWOkAWsgJopJcEF/view" target="_blank">View my resume</a></p>
+    </div>
+
+    <div class="informal-bio">
+      <h2>In my own words</h2>
+      <p>Hi there! My name is Cherry – I was born in Shanghai, but spent most of my life in Canada 🇨🇦 – first Vancouver, then Montreal, and right now I’m based in Washington, D.C 🇺🇸. I’m always thinking about everything AI 🤖 – sometimes about traditional geopolitics, sometimes about the impact of AI on women’s bodies, on social connections as humans, and sometimes more philosophical questions like the definition of intelligence and creativity 🤔... When I’m not thinking about AI, I’m either baking 🍰 or finding the next binge-worthy docu-series on Netflix. I love traveling to new places ✈️, checking out local grocery stores, and discovering third places ☕️. Currently, I’m reading 📚: Remarkably Bright Creatures (Shelby Van Pelt) and Meditations (Marcus Aurelius).</p>
     </div>
   </div>
 </div>
