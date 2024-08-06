@@ -52,17 +52,19 @@
     .bio, .resume {
       margin-top: 20px;
     }
+    .resume a {
+      color: #333;
+      text-decoration: underline;
+    }
     @media(min-width: 600px) {
       .container {
         flex-direction: row;
+        align-items: center;
       }
       .left-column {
         flex: 2;
         padding-right: 40px;
         text-align: right;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
       }
       .right-column {
         flex: 3;
