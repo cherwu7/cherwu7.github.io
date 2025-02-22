@@ -146,38 +146,54 @@
             font-size: 1.1rem; /* Match paragraph size */
             line-height: 1.6;  /* Improve readability */
         }
-
-        /* Responsive Design for Mobile */
+        /* Mobile Adjustments for Small Screens */
         @media screen and (max-width: 768px) {
-            nav {
-                padding: 15px 30px;
-            }
-            nav ul {
-                flex-direction: column;
-                align-items: flex-end;
-            }
-            nav ul li {
-                margin: 10px 0;
-            }
             .section {
                 flex-direction: column;
                 text-align: center;
                 padding: 60px 5%;
             }
+            nav {
+              display: none;
+            }
             .text-content, .profile-image {
-                max-width: 80%;
+                max-width: 90%;
+            }
+            .writings-section ul {
+                text-align: left;
+                padding-left: 20px;
             }
             h1 {
-                font-size: 3rem;
+                font-size: 3.5rem;
             }
             h2 {
-                font-size: 1.8rem;
+                font-size: 1.7rem;
             }
             p {
                 font-size: 1.2rem;
             }
             .cv-container {
                 grid-template-columns: 1fr; /* Switch to single-column for mobile */
+            }
+            .profile-image {
+                max-width: 60%; /* Scale profile image appropriately on small screens */
+            }
+        }
+
+        /* Further scaling for very small screens (Phones < 480px) */
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 3rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+            p {
+                font-size: 1.1rem;
+            }
+            .btn {
+                font-size: 1rem;
+                padding: 10px 20px;
             }
         }
     </style>
