@@ -1,124 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cherry Wu - AI Policy Analyst</title>
-  <meta name="description" content="Cherry Wu is an AI policy analyst with expertise in addressing policy and geopolitical issues in the emerging technology field.">
-  <meta name="keywords" content="Cherry Wu, AI, AI policy, AI policy analyst, emerging technology, AI research, AI governance">
-  <link rel="preconnect" href="https://rsms.me/">
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <style>
-    :root {
-      font-family: Inter, sans-serif;
-      font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
-    }
-    @supports (font-variation-settings: normal) {
-      :root { font-family: InterVariable, sans-serif; }
-    }
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #ffffff;
-      color: #000000;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      max-width: 1000px;
-    }
-    .column {
-      padding: 20px;
-    }
-    .header {
-      text-align: right;
-    }
-    .header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    .social-links {
-      text-align: right;
-    }
-    .social-links a {
-      display: block;
-      margin: 10px 0;
-      text-decoration: underline;
-      color: #000000;
-    }
-    .about, .read, .resume, .informal-bio {
-      margin-top: 20px;
-    }
-    .about a, .read a, .resume a {
-      color: #000000;
-      text-decoration: underline;
-    }
-    @media(min-width: 600px) {
-      .container {
-        flex-direction: row;
-        align-items: center;
-      }
-      .left-column {
-        flex: 1;
-        padding-right: 40px;
-        text-align: right;
-      }
-      .right-column {
-        flex: 2;
-      }
-    }
-    @media(max-width: 599px) {
-      .header, .social-links {
-        text-align: left;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cherry Wu - AI Governance</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .section {
+            padding: 100px 20px;
+            text-align: center;
+            min-height: 100vh;
+        }
+        #home {
+            background: #f4f4f4;
+        }
+        #cv {
+            background: #ddd;
+        }
+        #writings {
+            background: #bbb;
+        }
+        #contact {
+            background: #999;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll("nav a").forEach(anchor => {
+                anchor.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 50,
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 <body>
-
-<div class="container">
-  <div class="left-column column">
-    <div class="header">
-      <h1>Cherry Wu</h1>
-    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#writings">Writings</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     
-    <div class="social-links">
-      <a href="mailto:sw1306@georgetown.edu">Chat with me</a>
-      <a href="https://www.linkedin.com/in/cherry-wu/" target="_blank">Connect with me</a>
-    </div>
-  </div>
-  
-  <div class="right-column column">
-    <div class="about">
-      <h2>About</h2>
-      <p><a href="https://www.linkedin.com/in/cherry-wu/">Cherry</a> is an AI policy analyst and researcher with over four years of experience addressing policy and geopolitical issues in the emerging technology field. Her diverse background spans consultancies, think tanks, national labs, and independent research projects.</p>
-      <p>Cherry’s early career began at McGill University’s innovative research scholar program, where she explored the definitions of <a href="https://www.building21.ca/scholars/cherry-wu">collaborative creativity</a> with AI tools. At the Center for Security and Emerging Technology (CSET) in Washington, D.C., she developed her expertise in U.S. federal and state policy, particularly focusing on <a href="https://cset.georgetown.edu/article/riding-the-ai-wave-whats-happening-in-k-12-education/">K-12 AI education</a>. Her role at Lawrence Livermore National Laboratory involved leading an independent research project on generative AI and misinformation tactics in China, as well as contributing to <a href="https://cgsr.llnl.gov/content/assets/docs/2023-future-of-cyber-competition-annotated-bibliography.pdf">cybersecurity workshops</a>.</p>
-      <p>A strong advocate for fostering interest in AI and breaking down access barriers, Cherry is a facilitator at <a href="https://bluedot.org">BlueDot Impact</a>, where she leads cohorts in AI governance courses, discussing the latest developments in the field.</p>
-      <p>Cherry is fluent in English and Mandarin, with intermediate proficiency in French. She is also skilled in Python and Stata, with a solid background in data visualization and model building. Cherry holds a Master of Science in Foreign Service with a specialization in Science, Technology, and International Affairs from Georgetown University. She also earned a Bachelor of Arts in Political Science from McGill University, where she was a recipient of the Major Entrance Scholarship for exceptional women leaders.</p>
-    </div>
-
-    <div class="read">
-      <h2>Read</h2>
-      <p><a href="https://substack.com/@cherrywu">Check out my Substack</a></p>
-      <p><a href="https://cset.georgetown.edu/article/riding-the-ai-wave-whats-happening-in-k-12-education/">Check out my CSET publication on K-12 AI education</a></p>
-    </div>
+    <section id="home" class="section">
+        <h1>Cherry Wu</h1>
+        <h2>AI Governance for a Just Future</h2>
+        <p>Hi there! I’m an AI governance professional with over 5 years of experience navigating the intersections of technology, policy, and society. I am driven to shape a future where AI works for everyone.</p>
+        <a href="#cv" class="btn">Learn More About Me</a>
+    </section>
     
-    <div class="resume">
-      <h2>Resume</h2>
-      <p><a href="https://drive.google.com/file/d/1PZQYosbe2lb3XwKisBWOkAWsgJopJcEF/view" target="_blank">View my resume</a></p>
-    </div>
-
-    <div class="informal-bio">
-      <h2>In my own words</h2>
-      <p>Hi there! My name is Cherry – I was born in Shanghai, but spent most of my life in Canada 🇨🇦 – first Vancouver, then Montreal, and right now I’m based in Washington, D.C 🇺🇸. I’m always thinking about everything AI 🤖 – sometimes about traditional geopolitics, sometimes about the impact of AI on women, on social connections as humans, and sometimes more philosophical questions like the definition of intelligence and creativity 🤔... When I’m not thinking about AI, I’m probably baking 🍰, writing a Letterboxd review 🎬, or finding the next binge-worthy docu-series on Netflix. I love traveling to new places ✈️, checking out local grocery stores, and discovering third places ☕️. Currently, I’m reading 📚: Remarkably Bright Creatures (Shelby Van Pelt) and Meditations (Marcus Aurelius).</p>
-    </div>
-  </div>
-</div>
-
+    <section id="cv" class="section">
+        <h2>CV</h2>
+        <p><strong>McGill University, Building 21 AI Ethics Research Scholar</strong> (Sep 2020 – Dec 2020)</p>
+        <p><strong>Intellisia Institute, AI Insights Weekly Editorial Assistant</strong> (Dec 2020 – Aug 2022)</p>
+        <p><strong>Center for Security and Emerging Technology, CyberAI Research Assistant</strong> (Jan 2023 – May 2024)</p>
+        <p><strong>Lawrence Livermore National Lab, Research Associate</strong> (May 2023 – Aug 2023)</p>
+    </section>
+    
+    <section id="writings" class="section">
+        <h2>Writings</h2>
+        <p>Highlighted Publications:</p>
+        <ul>
+            <li>Ali Crawford & Cherry Wu, <em>Riding the AI Wave: What’s Happening in K-12 Education?</em>, CSET 2024</li>
+            <li>Cherry Wu, <em>Governance Efforts to Mitigate Technology-Facilitated Gender-Based Violence</em>, HRRC 2024</li>
+            <li>Cherry Wu, <em>The Impact of Generative AI on Technology-Facilitated Gender-Based Violence</em>, HRRC 2024</li>
+        </ul>
+        <p><a href="#">My Substack Page</a></p>
+    </section>
+    
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email: sw1306[at]georgetown[dot]edu</p>
+        <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        <p>In my own words… Hi there! I’m Cherry. I was born in Shanghai, but spent most of my life in Canada 🇨🇦 – first Vancouver, then Montreal, and right now I’m based in Washington, D.C 🇺🇸. I’m always thinking about everything AI 🤖...</p>
+    </section>
 </body>
 </html>
