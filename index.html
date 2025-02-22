@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cherry Wu - AI Governance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Montserrat, sans-serif;
             margin: 0;
             padding: 0;
             scroll-behavior: smooth;
@@ -20,31 +21,37 @@
             top: 0;
             width: 100%;
             background: white;
-            padding: 15px 30px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px 80px;
             display: flex;
             justify-content: flex-end;
+            box-sizing: border-box;
         }
         nav ul {
             display: flex;
             list-style: none;
             padding: 0;
             margin: 0;
+            max-width: 90%;
+            flex-wrap: wrap;
         }
         nav ul li {
-            margin: 0 20px;
+            margin: 0 25px;
         }
         nav ul li a {
             color: black;
             text-decoration: none;
+            font-size: 1.4rem;
             font-weight: bold;
         }
+        nav ul li a.active {
+            text-decoration: underline;
+        }
         .section {
-            padding: 120px 10%;
+            padding: 100px 10%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            min-height: 100vh;
+            min-height: 90vh;
             background: white;
         }
         .text-content {
@@ -55,25 +62,115 @@
             height: auto;
             border-radius: 50%;
         }
-        h1, h2 {
-            color: black;
+        h1 {
+            font-size: 4.6rem;
+        }
+        h2 {
+            font-size: 2.1rem;
+        }
+        h3 {
+            font-size: 1.8rem;
+        }
+        p {
+            font-size: 1.4rem;
+        }
+        .p-small {
+            font-size: 1.2rem;
         }
         .btn {
             display: inline-block;
             padding: 12px 24px;
-            background: #007BFF;
+            background: black;
             color: white;
             text-decoration: none;
             border-radius: 5px;
             margin-top: 20px;
             font-weight: bold;
+            font-size: 1.2rem;
+        }
+        /* Hyperlink styling */
+        a {
+          color: #292110; /* Darker gray for better contrast */
+          text-decoration: underline; /* Keep default underline */
+          font-weight: 500; /* Slightly bolder for readability */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Specific style for CV section */
+        .cv-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 80px 10%;
+        }
+
+        /* Three-column layout for CV */
+        .cv-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .cv-column {
+            padding: 20px;
+        }
+        .cv-column h3 {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid black;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .cv-column p {
+            font-size: 1rem;
+        } 
+
+        /* Ensure writings page is a single list format */
+        .writings-section {
+            display: block;
+            padding: 80px 10%;
+        }
+        .writings-section h3 {
+            margin-top: 30px;
+        }
+        .writings-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            font-size: 1.4rem; /* Match paragraph size */
+            line-height: 1.6;  /* Improve readability */
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll("nav ul li a");
+
+            window.addEventListener("scroll", () => {
+                let current = "";
+
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop - 120;
+                    if (scrollY >= sectionTop) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href").substring(1) === current) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="#home" class="active">Home</a></li>
             <li><a href="#cv">CV</a></li>
             <li><a href="#writings">Writings</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -90,30 +187,59 @@
         <img src="profile.png" alt="Cherry Wu" class="profile-image">
     </section>
     
-    <section id="cv" class="section">
-        <h2>CV</h2>
-        <p><strong>McGill University, Building 21 AI Ethics Research Scholar</strong> (Sep 2020 – Dec 2020)</p>
-        <p><strong>Intellisia Institute, AI Insights Weekly Editorial Assistant</strong> (Dec 2020 – Aug 2022)</p>
-        <p><strong>Center for Security and Emerging Technology, CyberAI Research Assistant</strong> (Jan 2023 – May 2024)</p>
-        <p><strong>Lawrence Livermore National Lab, Research Associate</strong> (May 2023 – Aug 2023)</p>
+    <section id="cv" class="section cv-section">
+        <div class="cv-container">
+            <div class="cv-column">
+                <h3>Current</h3>
+                <p><strong>Duco</strong><br><em>Associate, Tech Policy</em><br>October 2024 - Present<br>• Advising global clients on AI governance, risk, and compliance strategies.</p>
+                <p><strong>IEEE Human-Generated Data Working Group</strong><br>• Developing a taxonomy for the responsible use of human-generated data.</p>
+                <h3>Education</h3>
+                <p><strong>Georgetown University</strong><br><em>Master of Science in Science, Technology, and International Affairs</em><br>• Policy focus: AI and national security, mis/disinformation, corporate strategy</p>
+                <p><strong>McGill University</strong><br><em>Bachelor of Arts, Political Science</em></p>
+            </div>
+            <div class="cv-column">
+                <h3>Research</h3>
+                <p><strong>Center for Security and Emerging Technology</strong><br><em>Research Assistant</em><br>January 2023 – May 2024</p>
+                <p><strong>Lawrence Livermore National Lab</strong><br><em>Research Associate</em><br>May 2023 – August 2023</p>
+                <p><strong>Intellisia Institute</strong><br><em>Editorial Assistant</em><br>December 2020 – August 2022</p>
+                <p><strong>McGill University, Building 21</strong><br><em>AI Ethics Research Scholar</em><br>September 2020 – December 2020</p>
+            </div>
+            <div class="cv-column">
+                <h3>Teaching and Projects</h3>
+                <p><strong>McGill University</strong><br><em>Guest Lecturer</em><br>March 2025</p>
+                <p><strong>BlueDot Impact</strong><br><em>Course Facilitator</em><br>April 2024 – July 2024</p>
+                <p><strong>Intelligence Rising</strong><br><em>AI Wargaming Project Team Member</em><br>September 2021 – August 2022</p>
+            </div>
+        </div>
     </section>
     
-    <section id="writings" class="section">
-        <h2>Writings</h2>
-        <p>Highlighted Publications:</p>
-        <ul>
-            <li>Ali Crawford & Cherry Wu, <em>Riding the AI Wave: What’s Happening in K-12 Education?</em>, CSET 2024</li>
-            <li>Cherry Wu, <em>Governance Efforts to Mitigate Technology-Facilitated Gender-Based Violence</em>, HRRC 2024</li>
-            <li>Cherry Wu, <em>The Impact of Generative AI on Technology-Facilitated Gender-Based Violence</em>, HRRC 2024</li>
+    <section id="writings" class="section writings-section">
+      <h2>Highlights</h2>
+      <ul>
+          <li>Ali Crawford & Cherry Wu, <em>Riding the AI Wave: What’s Happening in K-12 Education?</em>, CSET 2024</li>
+          <li>Cherry Wu, <em>Governance Efforts to Mitigate Technology-Facilitated Gender-Based Violence</em>, HRRC 2024</li>
+          <li>Cherry Wu, <em>The Impact of Generative AI on Technology-Facilitated Gender-Based Violence</em>, HRRC 2024</li>
+      </ul>
+      
+      <h2>Other Works</h2>
+      <ul>
+          <li>Samuel Hickey, Thomas Van Bibber, Brandon Williams, Cherry Wu, <em>The Future of Cyber Competition</em>, Lawrence Livermore National Lab, 2023.</li>
+          <li>Cherry Wu, <em>Towards Digital Sovereignty: How Will the EU Shape its Future in Cloud Computing?</em>, AI Insights Weekly, 2021.</li>
+          <li>Cherry Wu, <em>Export Controls as the New Front of US-China Tech War</em>, AI Insights Weekly, 2021.</li>
+          <li>Cherry Wu, <em>Redefining Diplomacy in the Digital Age: The Silicon Valley Case</em>, AI Insights Weekly, 2021.</li>
+          <li>Visit my Substack</li>
         </ul>
-        <p><a href="#">My Substack Page</a></p>
     </section>
     
     <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>Email: sw1306[at]georgetown[dot]edu</p>
-        <p><a href="https://www.linkedin.com">LinkedIn</a></p>
-        <p>In my own words… Hi there! I’m Cherry. I was born in Shanghai, but spent most of my life in Canada 🇨🇦 – first Vancouver, then Montreal, and right now I’m based in Washington, D.C 🇺🇸. I’m always thinking about everything AI 🤖...</p>
+        <div class="text-content">
+            <h2>In my own words...</h2>
+            <p class="p-small">Hi there! I’m Cherry. I was born in Shanghai, but spent most of my life in Canada 🇨🇦 – first Vancouver, then Montreal, and right now I’m based in San Francisco 🇺🇸. I’m always thinking about everything AI 🤖 – sometimes about traditional geopolitics, sometimes about the impact of AI on social connections, on human cognition, and sometimes about the definition of intelligence and creativity 🤔... When I’m not thinking about AI, I’m probably baking 🍰, writing a Letterboxd review 🎬, or finding the next binge-worthy docu-series on Netflix. I love traveling to new places ✈️, checking out local grocery stores, and discovering third places ☕️. </p>
+            <p class="p-small">If any of this resonates with you – let’s chat!</p>
+            <p class="p-small"><strong>Email</strong>: sw1306[at]georgetown[dot]edu</p>
+            <p class="p-small"><a href="https://www.linkedin.com/in/cherry-wu/"><strong>Connect with Me</strong></a></p>
+        </div>
+        <img src="profile.png" alt="Cherry Wu" class="profile-image">
     </section>
 </body>
 </html>
