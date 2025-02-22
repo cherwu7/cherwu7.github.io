@@ -57,6 +57,9 @@
         .text-content {
             max-width: 50%;
         }
+        .text-content-large {
+            max-width: 60%;
+        }
         .profile-image {
             max-width: 35%;
             height: auto;
@@ -76,6 +79,7 @@
         }
         .p-small {
             font-size: 1.2rem;
+            line-height: 1.6;
         }
         .btn {
             display: inline-block;
@@ -90,7 +94,7 @@
         }
         /* Hyperlink styling */
         a {
-          color: #292110; /* Darker gray for better contrast */
+          color: #000000; /* Darker gray for better contrast */
           text-decoration: underline; /* Keep default underline */
           font-weight: 500; /* Slightly bolder for readability */
         }
@@ -140,6 +144,40 @@
             padding-left: 20px;
             font-size: 1.4rem; /* Match paragraph size */
             line-height: 1.6;  /* Improve readability */
+        }
+
+        /* Responsive Design for Mobile */
+        @media screen and (max-width: 768px) {
+            nav {
+                padding: 15px 30px;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .section {
+                flex-direction: column;
+                text-align: center;
+                padding: 60px 5%;
+            }
+            .text-content, .profile-image {
+                max-width: 80%;
+            }
+            h1 {
+                font-size: 3rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+            .cv-container {
+                grid-template-columns: 1fr; /* Switch to single-column for mobile */
+            }
         }
     </style>
     <script>
@@ -232,7 +270,7 @@
     </section>
     
     <section id="contact" class="section">
-        <div class="text-content">
+        <div class="text-content-large">
             <h2>In my own words...</h2>
             <p class="p-small">Hi there! I’m Cherry. I was born in Shanghai, but spent most of my life in Canada 🇨🇦 – first Vancouver, then Montreal, and right now I’m based in San Francisco 🇺🇸. I’m always thinking about everything AI 🤖 – sometimes about traditional geopolitics, sometimes about the impact of AI on social connections, on human cognition, and sometimes about the definition of intelligence and creativity 🤔... When I’m not thinking about AI, I’m probably baking 🍰, writing a Letterboxd review 🎬, or finding the next binge-worthy docu-series on Netflix. I love traveling to new places ✈️, checking out local grocery stores, and discovering third places ☕️. </p>
             <p class="p-small">If any of this resonates with you – let’s chat!</p>
